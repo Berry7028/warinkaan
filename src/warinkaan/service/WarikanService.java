@@ -23,7 +23,7 @@ public class WarikanService {
 			if (session.getSessionId() == sessionId) {
 				return session;
 			}
-		}
+		return null;
 	}
 
 	public boolean deleteSession(int sessionId) {
