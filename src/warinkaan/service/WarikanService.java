@@ -17,12 +17,14 @@ public class WarikanService {
 	public List<WarikanSession> getSessions() {
 		return sessions;
 	}
+
 //	セッションIDが一致するセッションを返す
 	private WarikanSession findSessionById(int sessionId) {
 		for (WarikanSession session : sessions) {
 			if (session.getSessionId() == sessionId) {
 				return session;
 			}
+		}
 		return null;
 	}
 
