@@ -17,7 +17,7 @@ public class WarikanService {
 	public List<WarikanSession> getSessions() {
 		return sessions;
 	}
-
+//	セッションIDが一致するセッションを返す
 	private WarikanSession findSessionById(int sessionId) {
 		for (WarikanSession session : sessions) {
 			if (session.getSessionId() == sessionId) {
@@ -87,6 +87,7 @@ public class WarikanService {
 		return true;
 	}
 
+//	割り勘の金額を計算、weight込み
 	public List<BurdenResult> calculateBurdens(int sessionId) {
 		List<BurdenResult> results = new ArrayList<>();
 
