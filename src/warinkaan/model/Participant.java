@@ -1,16 +1,16 @@
 package warinkaan.model;
 
 public class Participant {
-	int paparticipantId;
+	int participantId;
 	String name;
 	int weight;
 
 	public int getPaparticipantId() {
-		return paparticipantId;
+		return participantId;
 	}
 
 	public void setPaparticipantId(int paparticipantId) {
-		this.paparticipantId = paparticipantId;
+		this.participantId = paparticipantId;
 	}
 
 	public String getName() {
