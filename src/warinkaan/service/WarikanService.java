@@ -37,6 +37,18 @@ public class WarikanService {
 		return null;
 	}
 
+	public boolean updateSession(int sessionId, int newTotalAmount, int newPlayerId) {
+		WarikanSession session = findSessionById(sessionId);
+
+		if (session == null) {
+			return false;
+		}
+
+		session.setTotalAmount(newTotalAmount);
+		session.setPayerId(newPlayerId);
+		return true;
+	}
+
 	public boolean deleteSession(int sessionId) {
 		WarikanSession session = findSessionById(sessionId);
 
