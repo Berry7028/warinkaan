@@ -28,6 +28,15 @@ public class WarikanService {
 		return null;
 	}
 
+	private Participant findParticipantById(WarikanSession session, int participantId) {
+		for (Participant participant : session.getParticipants()) {
+			if (participant.getParticipantId() == participantId) {
+				return participant;
+			}
+		}
+		return null;
+	}
+
 	public boolean deleteSession(int sessionId) {
 		WarikanSession session = findSessionById(sessionId);
 
