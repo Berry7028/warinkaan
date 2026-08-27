@@ -46,7 +46,7 @@ public class Menu {
 		}
 
 		for (BurdenResult burdenResult : results) {
-			System.out.println(result.getParticipantName() + ": " + result.getBurdenAmount() + "円");
+			System.out.println(burdenResult.getParticipantName() + ": " + burdenResult.getBurdenAmount() + "円");
 		}
 
 	}
