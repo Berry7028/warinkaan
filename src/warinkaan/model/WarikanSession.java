@@ -1,12 +1,13 @@
 package warinkaan.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WarikanSession {
 	int sessionId;
 	int totalAmount;
 	int payerId;
-	List<Participant> participants;
+	List<Participant> participants = new ArrayList<>();
 
 	public int getSessionId() {
 		return sessionId;
