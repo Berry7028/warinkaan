@@ -5,12 +5,12 @@ public class Participant {
 	String name;
 	int weight;
 
-	public int getPaparticipantId() {
+	public int getParticipantId() {
 		return participantId;
 	}
 
-	public void setPaparticipantId(int paparticipantId) {
-		this.participantId = paparticipantId;
+	public void setParticipantId(int participantId) {
+		this.participantId = participantId;
 	}
 
 	public String getName() {
