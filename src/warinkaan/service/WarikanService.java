@@ -28,6 +28,27 @@ public class WarikanService {
 		return null;
 	}
 
+	private Participant findParticipantById(WarikanSession session, int participantId) {
+		for (Participant participant : session.getParticipants()) {
+			if (participant.getParticipantId() == participantId) {
+				return participant;
+			}
+		}
+		return null;
+	}
+
+	public boolean updateSession(int sessionId, int newTotalAmount, int newPlayerId) {
+		WarikanSession session = findSessionById(sessionId);
+
+		if (session == null) {
+			return false;
+		}
+
+		session.setTotalAmount(newTotalAmount);
+		session.setPayerId(newPlayerId);
+		return true;
+	}
+
 	public boolean deleteSession(int sessionId) {
 		WarikanSession session = findSessionById(sessionId);
 
