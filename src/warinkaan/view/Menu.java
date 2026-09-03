@@ -10,11 +10,12 @@ public class Menu {
 
 	public static void showMainMenu() {
 		System.out.println("わりんかーん");
-		System.out.println("1. セッション一覧");
-		System.out.println("2. セッション作成");
-		System.out.println("3. セッション編集");
+		System.out.println("1. セッション作成");
+		System.out.println("2. セッション一覧");
+		System.out.println("3. セッション更新");
 		System.out.println("4. セッション削除");
-		System.out.println("0. 削除");
+		System.out.println("5. 負担額を計算・表示");
+		System.out.println("6. 終了");
 	}
 
 	public static void showSessions(List<WarikanSession> sessions) {
