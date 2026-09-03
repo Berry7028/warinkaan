@@ -19,7 +19,7 @@ public class WarikanService {
 	}
 
 //	セッションIDが一致するセッションを返す
-	private WarikanSession findSessionById(int sessionId) {
+	public WarikanSession findSessionById(int sessionId) {
 		for (WarikanSession session : sessions) {
 			if (session.getSessionId() == sessionId) {
 				return session;
@@ -28,13 +28,22 @@ public class WarikanService {
 		return null;
 	}
 
-	private Participant findParticipantById(WarikanSession session, int participantId) {
+	public Participant findParticipantById(WarikanSession session, int participantId) {
 		for (Participant participant : session.getParticipants()) {
 			if (participant.getParticipantId() == participantId) {
 				return participant;
 			}
 		}
 		return null;
+	}
+
+	public boolean participantNameExists(WarikanSession session, String name) {
+		for (Participant participant : session.getParticipants()) {
+			if (participant.getName().equals(name)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean updateSession(int sessionId, int newTotalAmount, int newPlayerId) {
